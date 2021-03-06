@@ -17,7 +17,7 @@ namespace inheritance
             Worker n2 = new Nurse("Maria Evans", 60000);
             Worker n3 = new Nurse("David Evans", 40000);
             List<Worker> workers = new List<Worker>() { d1, d2, d3, n1, n2, n3 };
-            foreach (var worker in workers)
+            foreach (var worker in workers.OrderBy(x=>x.Salary))
             {
                 worker.Print();
             }
